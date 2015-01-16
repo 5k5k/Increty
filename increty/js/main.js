@@ -32,7 +32,7 @@ $(document).ready(function () {
         'verticalCentered': false,
         'easing': 'swing',
         'css3': true,
-        'autoScrolling':false,
+        'autoScrolling':true,
         'sectionsColor': ['#F0F2F4', '#B24A50', '#6233E6', '#fff'],
 //        'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
         'navigation': true,
@@ -46,6 +46,9 @@ $(document).ready(function () {
         },
 
         'onLeave': function (index, nextIndex, direction) {
+//            if(index==3){
+////                alert(1);
+//            }
             $("#content2").children().stop();
 //            if (index == 3 && direction == 'down'){
 //                $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
@@ -58,6 +61,10 @@ $(document).ready(function () {
 //            $('#staticImg').toggleClass('moveDown', nextIndex == 4);
 //            $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
             pageAnimation(nextIndex);
+        },
+
+        'onSlideLeave':function(){
+            alert(111);
         }
     });
 });
