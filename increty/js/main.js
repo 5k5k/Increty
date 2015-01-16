@@ -32,6 +32,7 @@ $(document).ready(function () {
         'verticalCentered': false,
         'easing': 'swing',
         'css3': true,
+        'autoScrolling':false,
         'sectionsColor': ['#F0F2F4', '#B24A50', '#6233E6', '#fff'],
 //        'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
         'navigation': true,

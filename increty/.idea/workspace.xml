@@ -26,10 +26,10 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.964286" vertical-offset="832" max-vertical-offset="2356">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="29" />
+            <state vertical-scroll-proportion="-4.214286" vertical-offset="1440" max-vertical-offset="2527">
+              <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
               <folding>
-                <marker date="1421389035309" expanded="true" signature="992:1107" placeholder="..." />
+                <marker date="1421396134321" expanded="true" signature="992:1107" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="apple.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://I:/data/JavaScript/fullPage.js-master/examples/apple.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.448718" vertical-offset="5986" max-vertical-offset="8436">
-              <caret line="321" column="62" selection-start-line="321" selection-start-column="62" selection-end-line="321" selection-end-column="62" />
+            <state vertical-scroll-proportion="-2.9102564" vertical-offset="5986" max-vertical-offset="8436">
+              <caret line="327" column="29" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="29" />
               <folding>
                 <marker date="1421077383000" expanded="true" signature="5768:5822" placeholder="..." />
               </folding>
@@ -70,7 +70,7 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.86" vertical-offset="1101" max-vertical-offset="2812">
+            <state vertical-scroll-proportion="-1.16" vertical-offset="1386" max-vertical-offset="2812">
               <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
               <folding />
             </state>
@@ -80,8 +80,8 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2603">
-              <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2622">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -92,8 +92,8 @@
       <file leaf-file-name="oneSection.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://I:/data/JavaScript/fullPage.js-master/examples/oneSection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3933">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38074073" vertical-offset="1377" max-vertical-offset="3933">
+              <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
               <folding>
                 <marker date="1421077383000" expanded="true" signature="1443:1497" placeholder="..." />
               </folding>
@@ -114,8 +114,8 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="I:/html/js/onepage-scroll-master/onepage-scroll-master/Demo/demo.html" />
         <option value="$PROJECT_DIR$/../../cybird_sp/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
@@ -352,7 +352,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1577">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1421389035309" expanded="true" signature="992:1107" placeholder="..." />
+            <marker date="1421396134321" expanded="true" signature="992:1107" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -380,7 +380,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1482">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <marker date="1421389035309" expanded="true" signature="992:1107" placeholder="..." />
+            <marker date="1421396134321" expanded="true" signature="992:1107" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -532,26 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://I:/data/JavaScript/fullPage.js-master/examples/apple.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.448718" vertical-offset="5986" max-vertical-offset="8436">
-          <caret line="321" column="62" selection-start-line="321" selection-start-column="62" selection-end-line="321" selection-end-column="62" />
-          <folding>
-            <marker date="1421077383000" expanded="true" signature="5768:5822" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.964286" vertical-offset="832" max-vertical-offset="2356">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="29" />
-          <folding>
-            <marker date="1421389035309" expanded="true" signature="992:1107" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.fullPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="36328">
@@ -560,9 +540,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://I:/data/JavaScript/fullPage.js-master/examples/apple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9102564" vertical-offset="5986" max-vertical-offset="8436">
+          <caret line="327" column="29" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="29" />
+          <folding>
+            <marker date="1421077383000" expanded="true" signature="5768:5822" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.214286" vertical-offset="1440" max-vertical-offset="2527">
+          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+          <folding>
+            <marker date="1421396134321" expanded="true" signature="992:1107" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.86" vertical-offset="1101" max-vertical-offset="2812">
+        <state vertical-scroll-proportion="-1.16" vertical-offset="1386" max-vertical-offset="2812">
           <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
           <folding />
         </state>
@@ -570,8 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2603">
-          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2622">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -580,8 +580,8 @@
     </entry>
     <entry file="file://I:/data/JavaScript/fullPage.js-master/examples/oneSection.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3933">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38074073" vertical-offset="1377" max-vertical-offset="3933">
+          <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
           <folding>
             <marker date="1421077383000" expanded="true" signature="1443:1497" placeholder="..." />
           </folding>
