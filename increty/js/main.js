@@ -447,4 +447,12 @@ function fc(id) {
 //    $("#" + id + " div:first-child").toggle();
 }
 
+function open() {
+    if ($("#open").attr('src') == "img/page1/open_off.png") {
+        $("#open").attr('src', 'img/page1/open_on.png');
+    } else {
+        $("#open").attr('src', 'img/page1/open_off.png');
+    }
+}
+
 var firstIn = true;

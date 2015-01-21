@@ -178,7 +178,7 @@ body {
     color: #000000;
 }
 
-#page1_footer .open {
+#page1_footer #open {
     position: absolute;
     right: 32px;
     top: 43px;
