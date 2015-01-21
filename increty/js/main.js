@@ -46,7 +46,7 @@ $(document).ready(function () {
         'navigation': true,
         'scrollingSpeed': 1000,
         'navigationPosition': 'right',
-        'navigationTooltips': ['Homepage', 'Advertise', 'Web Integration', 'Works', 'Mail Magazine', 'Contact'],
+        'navigationTooltips': ['Homepage', 'Advertise', 'Web Integration', 'Works', 'Company', 'Mail Magazine', 'Contact'],
 
         'afterLoad': function (anchorLink, index) {
 //            alert(anchorLink + " " + index);
