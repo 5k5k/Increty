@@ -54,6 +54,11 @@ $(document).ready(function () {
 //            }
 //            pageAnimation(index);
 //            pageLoadAnimation(index);
+            switch (index) {
+                case 5:
+//                    $("#content4").children().hide();
+                    break;
+            }
         },
 
         'onLeave': function (index, nextIndex, direction) {
@@ -204,7 +209,43 @@ function pageLeave(index) {
 
             $("#p4_obj7").animate({opacity: 0}, 400, 'easeOutCubic');
             $("#p4_bottom_bar").animate({opacity: 0}, 300);
+            break;
+        case 5:
+            $("#content5").children().stop();
+            $("#p5_bottom_bar").stop();
+            $("#p5_obj2").animate({top: 300, opacity: 0}, 300, 'easeOutCubic');
+            $("#p5_obj3").animate({top: 400, opacity: 0}, 300, 'easeOutCubic');
 
+            $("#p5_obj1").animate({opacity: 0}, 300);
+            $("#p5_obj4").animate({left: 460, opacity: 0}, 300, 'easeOutCubic');
+            $("#p5_obj5").animate({left: 390, opacity: 0}, 300, 'easeOutCubic');
+
+            $("#p5_bottom_bar").css({opacity: 0}).delay(4500).animate({opacity: 1}, 1000);
+            break;
+        case 6:
+            $("#content6").children().stop();
+            $("#p6_bottom_bar").stop();
+            $("#p6_obj1").animate({left: 400, opacity: 0}, 300, 'easeOutCubic');
+            $("#p6_obj2").delay(100).animate({left: 400, opacity: 0}, 300, 'easeOutCubic');
+            $("#p6_obj3").animate({top: 250, opacity: 0}, 300, 'easeOutCubic');
+            $("#p6_obj4").animate({top: 340, opacity: 0}, 300, 'easeOutCubic');
+
+            $("#p6_bottom_bar").animate({opacity: 0}, 300);
+            break;
+        case 7:
+            $("#content7").children().stop();
+            $("#p7_bottom_bar").stop();
+
+            $("#p7_obj3").animate({left: -235, top: -65, opacity: 0}, 300, 'easeOutCubic');
+            $("#p7_obj4").animate({right: -235, top: -65, opacity: 0}, 300, 'easeOutCubic');
+
+            $("#p7_obj1").animate({top: 170, opacity: 0}, 300, 'easeOutCubic');
+            $("#p7_obj2").animate({left: 400, opacity: 0}, 300, 'easeOutCubic');
+
+            $("#p7_obj5").animate({opacity: 0}, 300);
+
+            $("#p7_obj6").animate({opacity: 0, left: 210}, 200);
+            $("#p7_obj7").animate({opacity: 0, left: 200}, 200);
             break;
     }
 }
@@ -287,20 +328,61 @@ function pageAnimation(index) {
             break;
 
         case 5:
-            $("#p5_obj1").removeClass("rotate40");
+//            $("#p5_obj1").removeClass("animated rotate40");
+//            setTimeout(function () {
+//                $("#p5_obj1").removeClass("animated rotate40");
+//            }, 1500);
             $("#p5_obj2").css({top: 360, opacity: 0}).delay(1000).animate({top: 337, opacity: 1}, 1000, 'easeOutCubic');
             $("#p5_obj3").css({top: 330, opacity: 0}).delay(1000).animate({top: 377, opacity: 1}, 1000, 'easeOutCubic');
-            $("#p5_obj1").css({opacity: 1, "transform": "rotate(-40deg)"
-                , "-ms-transform": 'rotate(-40deg)',
+
+            $("#p5_obj1").css({opacity: 0, "transform": "rotate(-40deg)", "-ms-transform": 'rotate(-40deg)',
                 "-webkit-transform": 'rotate(-40deg)', "-o-transform": 'rotate(-40deg)', "-moz-transform": 'rotate(-40deg)'
-            });
-            $("#p5_obj1").addClass("animated rotate40");
+            }).delay(1500).animate({opacity: 1}, 1000).delay(1000).animate({opacity: 0}, 1000);
+            setTimeout(function () {
+                $("#p5_obj1").css({"transform": "rotate(0)", "-ms-transform": 'rotate(0)',
+                    "-webkit-transform": 'rotate(0)', "-o-transform": 'rotate(0)', "-moz-transform": 'rotate(0)'
+                }).delay(1000).animate({opacity: 1}, 1000);
+            }, 4500);
+            $("#p5_obj4").css({left: 360, opacity: 0}).delay(4000).animate({left: 415, opacity: 1}, 1500, 'easeOutCubic');
+            $("#p5_obj5").css({left: 450, opacity: 0}).delay(4000).animate({left: 420, opacity: 1}, 1500, 'easeOutCubic');
+
+            $("#p5_bottom_bar").css({opacity: 0}).delay(4500).animate({opacity: 1}, 1000);
+//            $("#p5_obj1").addClass("animated rotate40");
+//            $("#p5_obj1").css({opacity: 1, "transform": "rotate(-40deg)"
+//                , "-ms-transform": 'rotate(-40deg)',
+//                "-webkit-transform": 'rotate(-40deg)', "-o-transform": 'rotate(-40deg)', "-moz-transform": 'rotate(-40deg)'
+//            });
+//            $("#p5_obj1").css({opacity: 0});
+//            $("#p5_obj1").delay(3000).animate({opacity: 1}, 100, 'easeOutCubic').addClass("animated");
+//            setTimeout(function () {
+//                $("#p5_obj1").removeClass("animated rotate40");
+//            }, 5500);
 //                .delay(2000)
 //                .animate({opacity: 1}, 500)
 //                .animate({opacity: 1, transform: 'rotate(40)'
 //                    , "-ms-transform": 'rotate(40)',
 //                "-webkit-transform": 'rotate(40)', "-o-transform": 'rotate(40)', "-moz-transform": 'rotate(40)'
 //                }, 1000, 'easeOutCubic');
+            break;
+        case 6:
+            $("#p6_obj1").css({left: 330, opacity: 0}).delay(1500).animate({left: 369, opacity: 1}, 1500, 'easeOutCubic');
+            $("#p6_obj2").css({left: 330, opacity: 0}).delay(2500).animate({left: 367, opacity: 1}, 1500, 'easeOutCubic');
+            $("#p6_obj3").css({top: 188, opacity: 0}).delay(800).animate({top: 221, opacity: 1}, 1500, 'easeOutCubic');
+            $("#p6_obj4").css({top: 400, opacity: 0}).delay(800).animate({top: 366, opacity: 1}, 1500, 'easeOutCubic');
+
+            $("#p6_bottom_bar").css({opacity: 0}).delay(3000).animate({opacity: 1}, 1000);
+            break;
+        case 7:
+            $("#p7_obj3").css({left: -235, top: -65, opacity: 0}).delay(1000).animate({left: 65, top: 235, opacity: 1}, 1000, 'easeOutBack');
+            $("#p7_obj4").css({right: -235, top: -65, opacity: 0}).delay(1100).animate({right: 65, top: 235, opacity: 1}, 1000, 'easeOutBack');
+
+            $("#p7_obj1").css({top: 100, opacity: 0}).delay(1000).animate({top: 141, opacity: 1}, 1000, 'easeOutCubic');
+            $("#p7_obj2").css({left: 300, opacity: 0}).delay(1000).animate({left: 367, opacity: 1}, 1000, 'easeOutCubic');
+
+            $("#p7_obj5").css({opacity: 0}).delay(2000).animate({opacity: 1}, 1000);
+
+            $("#p7_obj6").css({opacity: 0, left: 150}).delay(2500).animate({opacity: 1, left: 188}, 1000);
+            $("#p7_obj7").css({opacity: 0, left: 260}).delay(2500).animate({opacity: 1, left: 239}, 1000);
             break;
     }
     if (index == 2) {
@@ -311,7 +393,7 @@ function pageAnimation(index) {
     }
 }
 
-function moveTo(index){
+function moveTo(index) {
     $.fn.fullpage.moveTo(index);
 }
 
