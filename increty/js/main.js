@@ -27,11 +27,13 @@
 //    });
 //});
 
+
 $(document).ready(function () {
 //    resizeContent1Height();
 //    $.fn.fullpage.setAllowScrolling(false);
 //    $.fn.fullpage.setKeyboardScrolling(false);
-
+    $(".fc_hide").hide();
+//    return;
     $('#main').fullpage({
         'verticalCentered': false,
         'easing': 'easeInQuart',
@@ -41,11 +43,10 @@ $(document).ready(function () {
 //        'easing': 'swing',
         'css3': true,
         'autoScrolling': true,
-//        'sectionsColor': ['', '', '#6233E6', '#fff'],
         'navigation': true,
         'scrollingSpeed': 1000,
         'navigationPosition': 'right',
-        'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
+        'navigationTooltips': ['Homepage', 'Advertise', 'Web Integration', 'Works', 'Mail Magazine', 'Contact'],
 
         'afterLoad': function (anchorLink, index) {
 //            alert(anchorLink + " " + index);
@@ -89,6 +90,7 @@ $(document).ready(function () {
     });
 
 });
+
 
 window.onload = function () {
 //    alert("1");
@@ -432,5 +434,17 @@ $(window).resize(function () {
 //    // the browser's width is less than 600, the fallback will kick in.
 //    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
 //});
+function fc(id) {
+//    if()
+    var src = $("#" + id).children(":first").attr("src");
+    if (src == "img/footer/arrow_off.png") {
+        $("#" + id).children(":first").attr("src", "img/footer/arrow_on.png");
+    } else {
+        $("#" + id).children(":first").attr("src", "img/footer/arrow_off.png");
+    }
+
+    $("#" + id).children().eq(2).toggle();
+//    $("#" + id + " div:first-child").toggle();
+}
 
 var firstIn = true;

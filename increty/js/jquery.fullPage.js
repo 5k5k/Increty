@@ -197,9 +197,9 @@
         $.fn.fullpage.moveSectionDown = function () {
             var next = $('.fp-section.active').next('.fp-section');
 
-            if (!next.length) {
-                next = $('#footer');
-            }
+//            if (!next.length) {
+//                next = $('#footer');
+//            }
 
             //looping to the top if there's no more sections below
             if (!next.length &&
@@ -251,14 +251,14 @@
             }
 
             $('.fp-section').each(function () {
-                var scrollHeight = windowsHeight-myHeight - parseInt($(this).css('padding-bottom')) - parseInt($(this).css('padding-top'));
+                var scrollHeight = windowsHeight - myHeight - parseInt($(this).css('padding-bottom')) - parseInt($(this).css('padding-top'));
 
                 //adjusting the height of the table-cell for IE and Firefox
                 if (options.verticalCentered) {
                     $(this).find('.fp-tableCell').css('height', getTableHeight($(this)) + 'px');
                 }
 
-                $(this).css('height', windowsHeight-myHeight + 'px');
+                $(this).css('height', windowsHeight - myHeight + 'px');
 
                 //resizing the scrolling divs
                 if (options.scrollOverflow) {
@@ -356,7 +356,7 @@
                 $(this).addClass('active');
             }
 
-            $(this).css('height', windowsHeight-myHeight + 'px');
+            $(this).css('height', windowsHeight - myHeight + 'px');
 
             if (options.paddingTop || options.paddingBottom) {
                 $(this).css('padding', options.paddingTop + ' 0 ' + options.paddingBottom + ' 0');
@@ -804,11 +804,64 @@
                     //scrolling down?
                     if (delta < 0) {
                         console.log("which " + fromIndex + " " + " " + fromIndex);
-                        scrolling('down', scrollable);
+                        if (fromIndex >= 6) {
+                            inFooter = true;
+//                            $("#main").attr("padding_bottom", "-500px");
+//                            alert($("#footer").height());
+                            var a = '-' + $("#footer").height() + 'px';
+//                            alert(a);
+                            container.css({
 
+//                                'padding-top': '-500px',
+                                'margin-top': a,
+                                'margin-bottom': '-128px'
+//                                'height': '',
+//                                'position': '',
+//                                '-ms-touch-action': '',
+//                                'touch-action': ''
+                            });
+//                            $('body,html').animate({scrollTop: $('#footer').position().top}, 100);
+//                            alert(1);
+//                            $(window).scrollTop()
+//                            window.location.href = "#footer";
+//                            var value = window.location.hash.replace('#', '').split('/');
+//                            window.url="#footer";
+//                            scrollPage($('#footer'), null, false);
+                        } else {
+                            scrolling('down', scrollable);
+                        }
                         //scrolling up?
                     } else {
-                        scrolling('up', scrollable);
+                        if (fromIndex >= 6) {
+//                            if (inFooter) {
+//                                window.location.href = "#6";
+//                                scrollPage($('.fp-section').eq(6), null, true);
+//                                alert(1);
+//                                inFooter = false;
+//                            } else {
+//                            scrolling('up', scrollable);
+//                            }
+                            if (inFooter) {
+                                isMoving=true;
+
+                                var a = $("#footer").height() + 'px';
+                                container.css({
+                                    'margin-top': 0,
+                                    'margin-bottom': '0'
+                                });
+                                setTimeout(function () {
+                                    inFooter = false;
+                                    isMoving = false;
+//                                    $.isFunction(v.callback) && v.callback.call(this);
+
+                                }, scrollDelay);
+
+                            } else {
+                                scrolling('up', scrollable);
+                            }
+                        } else {
+                            scrolling('up', scrollable);
+                        }
                     }
                 }
 
@@ -1257,7 +1310,7 @@
         //when resizing the site, we adjust the heights of the sections, slimScroll...
         $(window).resize(resizeHandler);
 
-        var previousHeight = windowsHeight-myHeight;
+        var previousHeight = windowsHeight - myHeight;
         var resizeId;
 
         function resizeHandler() {
@@ -1439,7 +1492,7 @@
                 }
             }
 
-            var scrollHeight = windowsHeight-myHeight - parseInt(section.css('padding-bottom')) - parseInt(section.css('padding-top'));
+            var scrollHeight = windowsHeight - myHeight - parseInt(section.css('padding-bottom')) - parseInt(section.css('padding-top'));
 
             //needs scroll?
             if (contentHeight > scrollHeight) {
@@ -1484,7 +1537,7 @@
         }
 
         function getTableHeight(element) {
-            var sectionHeight = windowsHeight-myHeight;
+            var sectionHeight = windowsHeight - myHeight;
 
             if (options.paddingTop || options.paddingBottom) {
                 var section = element;
@@ -1493,7 +1546,7 @@
                 }
 
                 var paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));
-                sectionHeight = (windowsHeight-myHeight - paddings);
+                sectionHeight = (windowsHeight - myHeight - paddings);
             }
 
             return sectionHeight;
@@ -1934,5 +1987,5 @@
     };
 })(jQuery);
 
-
+var inFooter = false;
 var myHeight = 128;
