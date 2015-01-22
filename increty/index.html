@@ -19,7 +19,6 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link href='css/jquery.fullPage.css' rel='stylesheet' type='text/css'>
     <link href='css/examples.css' rel='stylesheet' type='text/css'>
-    <!--<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>-->
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -27,31 +26,6 @@
     experience.</p>
 <![endif]-->
 
-<!--<div class="wrapper">-->
-<!--<div class="main">-->
-<!--<section class="page1">-->
-<!--222-->
-<!--</section>-->
-
-<!--<section class="page2">-->
-<!--<div class="content2">-->
-<!--<img id="p2_obj1" src="img/page2/page_name.png" width="142" height="33"/>-->
-<!--<img id="p2_obj2" src="img/page2/advertise.png" width="77" height="11"/>-->
-<!--<img id="p2_obj3" src="img/page2/more.png" width="140" height="38"/>-->
-
-<!--</div>-->
-<!--</section>-->
-
-<!--<section class="page3">-->
-<!--4444-->
-<!--</section>-->
-<!--</div>-->
-<!--</div>-->
-<!--<header>-->
-<!--<div class="header_content">-->
-<!--<img class=".logo" src="img/LOGO.png" width="141" height="44"/>-->
-<!--</div>-->
-<!--</header>-->
 <div id="header">
     <div class="header_content">
         <a href="javascript:moveTo(1);"> <img class="logo" src="img/LOGO.png" width="141" height="44"/></a>
@@ -71,15 +45,19 @@
         <div id="page1_footer">
             <div id="p1_footer_content">
                 <img class="news" src="img/page1/NEWS.png" width="61" height="17"/>
-                <p>2014.10.01　Webサイトをリニューアルしました。</p>
+                <div>2014.10.01　Webサイトをリニューアルしました。
+                    <div>
+                        2014.10.01　Webサイトをリニューアルしました。<br/>
+                        2014.10.01　Webサイトをリニューアルしました。<br/>
+                    </div>
+                </div>
                 <a href="javascript:open();"><img id="open" src="img/page1/open_on.png" width="58" height="10"/></a>
             </div>
         </div>
         <div id="content1">
             <img id="ltd" src="img/page1/LTD.png" width="424" height="42"/>
-            <a href="#"> <img id="enter" src="img/page1/ENTER.png" width="71" height="31"/></a>
+            <a href="javascript:moveTo(2);"> <img id="enter" src="img/page1/ENTER.png" width="71" height="31"/></a>
         </div>
-
     </div>
     <div class="section page2">
         <div id="content2">
@@ -114,15 +92,13 @@
             <img id="p3_obj6" src="img/page3/icon06.png" width="179" height="178"/>
             <img id="p3_obj7" src="img/page3/icon07.png" width="179" height="178"/>
             <img id="p3_obj8" src="img/page3/icon08.png" width="179" height="178"/>
-
             <img id="p3_obj9" src="img/page3/text01.png" width="309" height="309"/>
             <img id="p3_obj10" src="img/page3/text02.png" width="309" height="309"/>
             <img id="p3_obj11" src="img/page3/text03.png" width="309" height="309"/>
             <img id="p3_obj12" src="img/page3/text04.png" width="310" height="309"/>
             <img id="p3_obj13" src="img/page3/text05.png" width="310" height="309"/>
             <img id="p3_obj14" src="img/page3/text06.png" width="309" height="309"/>
-
-            <img id="p3_obj15" src="img/page3/center.png" width="178" height="178"/>
+            <a id="p3_obj15" href="#"><img src="img/page3/center.png" width="178" height="178"/></a>
         </div>
         <div id="p3_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(4);"><img src="img/page3/Next.png" width="132" height="66" class="next"/> </a>
@@ -134,14 +110,12 @@
             <img id="p4_obj1" src="img/page4/text01.png" width="260" height="48"/>
             <img id="p4_obj2" src="img/page4/text02.png" width="268" height="48"/>
             <img id="p4_obj3" src="img/page4/text03.png" width="268" height="48"/>
-
             <img id="p4_obj4" src="img/page4/line.png" width="754" height="1"/>
             <p id="p4_obj5">さまざまな事業経営をサポートする、<br/>
                 株式会社インクリティの事業実績をご紹介します。
             </p>
             <img id="p4_obj6" src="img/page4/line.png" width="754" height="1"/>
-
-            <img id="p4_obj7" src="img/page4/center.png" width="210" height="210"/>
+            <a id="p4_obj7" href="#"><img src="img/page4/center.png" width="210" height="210"/></a>
         </div>
         <div id="p4_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(5);"><img src="img/page4/Next.png" width="132" height="66" class="next"/> </a>
@@ -156,7 +130,7 @@
                 株式会社インクリティのできること、その使命をご紹介します。
             </p>
             <img id="p5_obj4" src="img/page5/title.png" width="142" height="61"/>
-            <img id="p5_obj5" src="img/page5/more.png" width="140" height="38"/>
+            <a id="p5_obj5" href="#"><img src="img/page5/more.png" width="140" height="38"/></a>
         </div>
         <div id="p5_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(6);"><img src="img/page5/Next.png" width="132" height="66" class="next"/> </a>
@@ -166,7 +140,7 @@
     <div class="section page6">
         <div id="content6">
             <img id="p6_obj1" src="img/page6/title.png" width="237" height="61"/>
-            <img id="p6_obj2" src="img/page6/more.png" width="246" height="38"/>
+            <a id="p6_obj2" href="#"><img src="img/page6/more.png" width="246" height="38"/></a>
             <img id="p6_obj3" src="img/page6/box.png" width="401" height="252"/>
             <p id="p6_obj4">事業経営やメディアに関するトレンド情報など、さまざまな最新情報をメールマガジンで配信しています。</p>
         </div>
@@ -178,7 +152,7 @@
     <div class="section page7">
         <div id="content7">
             <img id="p7_obj1" src="img/page7/title.png" width="212" height="57"/>
-            <img id="p7_obj2" src="img/page7/more.png" width="246" height="38"/>
+            <a id="p7_obj2" href="#"><img src="img/page7/more.png" width="246" height="38"/></a>
             <img id="p7_obj3" src="img/page7/circle_l.png" width="134" height="127"/>
             <img id="p7_obj4" src="img/page7/circle_r.png" width="134" height="127"/>
             <img id="p7_obj5" src="img/page7/box.png" width="756" height="164"/>
@@ -200,7 +174,6 @@
             <div id="fc_b2"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b2');">Web制作</a></div>
             <div id="fc_b3"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b3');">実績</a></div>
         </div>
-
         <div id="fc_2">
             <div id="fc_b4"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b4');">会社案内</a>
                 <div class="fc_hide">
@@ -214,14 +187,12 @@
             <!--<img class="footer_arrow" src="img/footer/arrow_off.png">広告事業<br/>-->
             <!--<img class="footer_arrow" src="img/footer/arrow_off.png">広告事業-->
         </div>
-
         <div id="fc_3">
             <div id="fc_b5"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b5');">メールマガジン</a></div>
             <div id="fc_b6"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b6');">お問い合わせ</a></div>
             <!--<br/>-->
             <!--<img class="footer_arrow" src="img/footer/arrow_off.png">広告事業-->
         </div>
-
         <div id="fc_4">
             <div id="fc_b7"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b7');">プライバシーポリシー</a></div>
             <div id="fc_b8"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b8');">ご利用規約</a></div>
@@ -231,32 +202,11 @@
     <p id="copyright">Copyright © Increty Co.,LTD. All right reserved.</p>
 </div>
 
-
 <script src="js/vendor/jquery-1.11.1.min.js"></script>
 <script src="js/vendor/jquery-ui.min.js"></script>
 <script src="js/vendor/jquery.easings.min.js"></script>
 <script src="js/plugins.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-
 <script src="js/main.js"></script>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--<script>-->
-<!--(function (b, o, i, l, e, r) {-->
-<!--b.GoogleAnalyticsObject = l;-->
-<!--b[l] || (b[l] =-->
-<!--function () {-->
-<!--(b[l].q = b[l].q || []).push(arguments)-->
-<!--});-->
-<!--b[l].l = +new Date;-->
-<!--e = o.createElement(i);-->
-<!--r = o.getElementsByTagName(i)[0];-->
-<!--e.src = '//www.google-analytics.com/analytics.js';-->
-<!--r.parentNode.insertBefore(e, r)-->
-<!--}(window, document, 'script', 'ga'));-->
-<!--ga('create', 'UA-XXXXX-X');-->
-<!--ga('send', 'pageview');-->
-<!--</script>-->
 </body>
 </html>

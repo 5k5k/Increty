@@ -598,9 +598,28 @@
                     currentSection.addClass('active').siblings().removeClass('active');
 
                     if (!isMoving) {
+//                        if (fromIndex >= 6) {
+//                        if (inFooter) {
+//                            isMoving = true;
+//                            container.css({
+//                                'margin-top': 0,
+//                                'margin-bottom': '0'
+//                            });
+//                            setTimeout(function () {
+//                                inFooter = false;
+//                                isMoving = false;
+////                                    $.isFunction(v.callback) && v.callback.call(this);
+//                                $.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, sectionIndex, yMovement);
+//
+//                                $.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, sectionIndex);
+//                            }, scrollDelay);
+//                            alert('in');
+//                        } else {
+//                        }
                         $.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, sectionIndex, yMovement);
 
                         $.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, sectionIndex);
+//                        }
                     }
 
                     activateMenuAndNav(anchorLink, 0);
@@ -794,68 +813,38 @@
 
                 var activeSection = $('.fp-section.active');
                 var scrollable = isScrollable(activeSection);
-//            console.log("which "+activeSection.index( $(this)[0] ) );
                 var fromIndex = $('.fp-section.active').index('.fp-section');
-//                var toIndex = destiny.index('.fp-section');
-//                console.log("which " + fromIndex + " " + " " + fromIndex);
 
-//            console.log("which "+activeSection.parent().index(activeSection));
                 if (!isMoving) { //if theres any #
                     //scrolling down?
                     if (delta < 0) {
-                        console.log("which " + fromIndex + " " + " " + fromIndex);
-                        if (fromIndex >= 6) {
+                        if (fromIndex >= 6) {//show footer
                             inFooter = true;
-//                            $("#main").attr("padding_bottom", "-500px");
-//                            alert($("#footer").height());
                             var a = '-' + $("#footer").height() + 'px';
-//                            alert(a);
                             container.css({
-
-//                                'padding-top': '-500px',
                                 'margin-top': a,
                                 'margin-bottom': '-128px'
-//                                'height': '',
-//                                'position': '',
-//                                '-ms-touch-action': '',
-//                                'touch-action': ''
                             });
-//                            $('body,html').animate({scrollTop: $('#footer').position().top}, 100);
-//                            alert(1);
-//                            $(window).scrollTop()
-//                            window.location.href = "#footer";
-//                            var value = window.location.hash.replace('#', '').split('/');
-//                            window.url="#footer";
-//                            scrollPage($('#footer'), null, false);
+                            console.log("111");
+                            $("#footer_top").stop();
+                            $("#footer_top").css({opacity: 0}).delay(1000).animate({opacity: 1}, 1000);
                         } else {
                             scrolling('down', scrollable);
                         }
                         //scrolling up?
                     } else {
-                        if (fromIndex >= 6) {
-//                            if (inFooter) {
-//                                window.location.href = "#6";
-//                                scrollPage($('.fp-section').eq(6), null, true);
-//                                alert(1);
-//                                inFooter = false;
-//                            } else {
-//                            scrolling('up', scrollable);
-//                            }
+                        if (fromIndex >= 6) {//close footer
                             if (inFooter) {
-                                isMoving=true;
-
-                                var a = $("#footer").height() + 'px';
+                                isMoving = true;
                                 container.css({
                                     'margin-top': 0,
-                                    'margin-bottom': '0'
+                                    'margin-bottom': 0
                                 });
+//                                $("#footer_top").animate({opacity: 0}, 200);
                                 setTimeout(function () {
                                     inFooter = false;
                                     isMoving = false;
-//                                    $.isFunction(v.callback) && v.callback.call(this);
-
                                 }, scrollDelay);
-
                             } else {
                                 scrolling('up', scrollable);
                             }
@@ -968,9 +957,21 @@
 
             setState(slideIndex, slideAnchorLink, v.anchorLink, v.sectionIndex);
 
+            if (inFooter) {
+                isMoving = true;
+                container.css({
+                    'margin-top': 0,
+                    'margin-bottom': 0
+                });
+                setTimeout(function () {
+                    inFooter = false;
+                    isMoving = false;
+                }, scrollDelay);
+//                alert('in');
+            }
             //callback (onLeave) if the site is not just resizing and readjusting the slides
             $.isFunction(options.onLeave) && !v.localIsResizing && options.onLeave.call(this, v.leavingSection, (v.sectionIndex + 1), v.yMovement);
-
+//            console.log("gg");
             performMovement(v);
 
             //flag to avoid callingn `scrollPage()` twice in case of using anchor links
