@@ -819,13 +819,15 @@
                     //scrolling down?
                     if (delta < 0) {
                         if (fromIndex >= 6) {//show footer
+                            if (inFooter) {
+                                return;
+                            }
                             inFooter = true;
                             var a = '-' + $("#footer").height() + 'px';
                             container.css({
                                 'margin-top': a,
                                 'margin-bottom': '-128px'
                             });
-                            console.log("111");
                             $("#footer_top").stop();
                             $("#footer_top").css({opacity: 0}).delay(1000).animate({opacity: 1}, 1000);
                         } else {
@@ -967,11 +969,10 @@
                     inFooter = false;
                     isMoving = false;
                 }, scrollDelay);
-//                alert('in');
             }
             //callback (onLeave) if the site is not just resizing and readjusting the slides
             $.isFunction(options.onLeave) && !v.localIsResizing && options.onLeave.call(this, v.leavingSection, (v.sectionIndex + 1), v.yMovement);
-//            console.log("gg");
+
             performMovement(v);
 
             //flag to avoid callingn `scrollPage()` twice in case of using anchor links

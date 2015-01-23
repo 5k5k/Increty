@@ -2,5 +2,12 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
 .idea
-views
-fonts
+advertise_01.css
+advertise_02.css
+company_01.css
+company_02.css
+company_03.css
+web_01.css
+web_02.css
+works_01.css
+works_02.css

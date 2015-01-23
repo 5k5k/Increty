@@ -16,16 +16,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link href='css/jquery.fullPage.css' rel='stylesheet' type='text/css'>
-    <link href='css/examples.css' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your
     experience.</p>
 <![endif]-->
-
 <div id="header">
     <div class="header_content">
         <a href="javascript:moveTo(1);"> <img class="logo" src="img/LOGO.png" width="141" height="44"/></a>
@@ -39,7 +37,6 @@
         </div>
     </div>
 </div>
-
 <div id="main">
     <div class="section" id="page1">
         <div id="page1_footer">
@@ -54,16 +51,17 @@
                 <a href="javascript:open();"><img id="open" src="img/page1/open_on.png" width="58" height="10"/></a>
             </div>
         </div>
-        <div id="content1">
-            <img id="ltd" src="img/page1/LTD.png" width="424" height="42"/>
-            <a href="javascript:moveTo(2);"> <img id="enter" src="img/page1/ENTER.png" width="71" height="31"/></a>
+        <div id="c1_bg">
+            <div id="content1">
+                <img id="ltd" src="img/page1/LTD.png" width="424" height="42"/>
+                <a id="enter" href="javascript:moveTo(2);"> <img src="img/page1/ENTER.png" width="71" height="31"/></a>
+            </div>
         </div>
     </div>
     <div class="section page2">
         <div id="content2">
             <img id="p2_obj1" src="img/page2/page_name.png" width="142" height="33"/>
             <img id="p2_obj2" src="img/page2/advertise.png" width="77" height="11"/>
-            <a href="#"><img id="p2_obj3" src="img/page2/more.png" width="140" height="38"/></a>
             <p id="p2_obj4">企業や製品を宣伝するための各種媒体（テレビ・新聞・雑誌）<br/>の広告枠の買い付け・交渉・企画を行います。</p>
             <img id="p2_obj5" src="img/page2/bottom_bg.png" width="896" height="172"/>
             <img id="p2_obj6" src="img/page2/icon_04.png" width="90" height="90"/>
@@ -76,6 +74,8 @@
             <img id="p2_obj13" src="img/page2/icon_18.png" width="90" height="90"/>
             <img id="p2_obj14" src="img/page2/title.png" width="331" height="58"/>
             <img id="p2_obj15" src="img/page2/icon_names.png" width="836" height="14"/>
+            <a id="p2_obj3" href="views/advertise_01.html" target="_blank">
+                <img src="img/page2/more.png" width="140" height="38"/></a>
         </div>
         <div id="p2_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(3);"><img src="img/page2/Next.png" width="132" height="66" class="next"/> </a>
@@ -98,7 +98,8 @@
             <img id="p3_obj12" src="img/page3/text04.png" width="310" height="309"/>
             <img id="p3_obj13" src="img/page3/text05.png" width="310" height="309"/>
             <img id="p3_obj14" src="img/page3/text06.png" width="309" height="309"/>
-            <a id="p3_obj15" href="#"><img src="img/page3/center.png" width="178" height="178"/></a>
+            <a id="p3_obj15" href="views/web_01.html" target="_blank"><img src="img/page3/center.png" width="178"
+                                                                           height="178"/></a>
         </div>
         <div id="p3_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(4);"><img src="img/page3/Next.png" width="132" height="66" class="next"/> </a>
@@ -115,7 +116,8 @@
                 株式会社インクリティの事業実績をご紹介します。
             </p>
             <img id="p4_obj6" src="img/page4/line.png" width="754" height="1"/>
-            <a id="p4_obj7" href="#"><img src="img/page4/center.png" width="210" height="210"/></a>
+            <a id="p4_obj7" href="views/works_01.html" target="_blank"><img src="img/page4/center.png" width="210"
+                                                                            height="210"/></a>
         </div>
         <div id="p4_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(5);"><img src="img/page4/Next.png" width="132" height="66" class="next"/> </a>
@@ -130,7 +132,8 @@
                 株式会社インクリティのできること、その使命をご紹介します。
             </p>
             <img id="p5_obj4" src="img/page5/title.png" width="142" height="61"/>
-            <a id="p5_obj5" href="#"><img src="img/page5/more.png" width="140" height="38"/></a>
+            <a id="p5_obj5" href="views/company_01.html" target="_blank"><img src="img/page5/more.png" width="140"
+                                                                              height="38"/></a>
         </div>
         <div id="p5_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(6);"><img src="img/page5/Next.png" width="132" height="66" class="next"/> </a>
@@ -140,9 +143,9 @@
     <div class="section page6">
         <div id="content6">
             <img id="p6_obj1" src="img/page6/title.png" width="237" height="61"/>
-            <a id="p6_obj2" href="#"><img src="img/page6/more.png" width="246" height="38"/></a>
             <img id="p6_obj3" src="img/page6/box.png" width="401" height="252"/>
             <p id="p6_obj4">事業経営やメディアに関するトレンド情報など、さまざまな最新情報をメールマガジンで配信しています。</p>
+            <a id="p6_obj2" href="#"><img src="img/page6/more.png" width="246" height="38"/></a>
         </div>
         <div id="p6_bottom_bar" class="bottom_bar">
             <a href="javascript:moveTo(7);"><img src="img/page6/Next.png" width="132" height="66" class="next"/> </a>
@@ -152,7 +155,6 @@
     <div class="section page7">
         <div id="content7">
             <img id="p7_obj1" src="img/page7/title.png" width="212" height="57"/>
-            <a id="p7_obj2" href="#"><img src="img/page7/more.png" width="246" height="38"/></a>
             <img id="p7_obj3" src="img/page7/circle_l.png" width="134" height="127"/>
             <img id="p7_obj4" src="img/page7/circle_r.png" width="134" height="127"/>
             <img id="p7_obj5" src="img/page7/box.png" width="756" height="164"/>
@@ -160,26 +162,41 @@
             <p id="p7_obj7">株式会社インクリティは総合的な事業サポートを行っています。<br/>
                 まずはお気軽にご相談ください。
             </p>
+            <a id="p7_obj2" href="#"><img src="img/page7/more.png" width="246" height="38"/></a>
         </div>
     </div>
 </div>
-
 <div id="footer">
     <img id="footer_title" src="img/footer/LOGO.png" width="141" height="44"/>
-    <a href=""><img id="footer_top" src="img/footer/TOP.png" width="66" height="66"/></a>
+    <a href="javascript:moveTo(1);"><img id="footer_top" src="img/footer/TOP.png" width="66" height="66"/></a>
     <div id="footer_content" class="clearfix">
         <div id="fc_1">
             <div id="fc_b1"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b1');">広告事業</a>
+                <div class="fc_hide">
+                    <a href="views/advertise_01.html" target="_blank">メディア広告</a><br/>
+                    <a href="views/advertise_02.html" target="_blank">紙媒体</a><br/>
+                </div>
             </div>
-            <div id="fc_b2"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b2');">Web制作</a></div>
-            <div id="fc_b3"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b3');">実績</a></div>
+            <div id="fc_b2"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b2');">Web制作</a>
+                <div class="fc_hide">
+                    <a href="views/web_01.html" target="_blank">HP制作</a><br/>
+                    <a href="views/web_02.html" target="_blank">SEO・SEM</a><br/>
+                </div>
+            </div>
+
+            <div id="fc_b3"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b3');">実績</a>
+                <div class="fc_hide">
+                    <a href="views/works_01.html" target="_blank">イラスト制作</a><br/>
+                    <a href="views/works_02.html" target="_blank">アプリ制作</a><br/>
+                </div>
+            </div>
         </div>
         <div id="fc_2">
-            <div id="fc_b4"><img src="img/footer/arrow_off.png"><a href="javascript:fc('fc_b4');">会社案内</a>
+            <div id="fc_b4"><img src="img/footer/arrow_on.png"><a href="javascript:fc('fc_b4');">会社案内</a>
                 <div class="fc_hide">
-                    <a href="#">会社概要</a><br/>
-                    <a href="#">社名にこめる想い</a><br/>
-                    <a href="#">沿革</a><br/>
+                    <a href="views/company_01.html" target="_blank">会社概要</a><br/>
+                    <a href="views/company_02.html" target="_blank">社名にこめる想い</a><br/>
+                    <a href="views/company_03.html" target="_blank">沿革</a><br/>
                     <a href="#">アクセスマップ</a>
                 </div>
             </div>
@@ -201,7 +218,6 @@
     </div>
     <p id="copyright">Copyright © Increty Co.,LTD. All right reserved.</p>
 </div>
-
 <script src="js/vendor/jquery-1.11.1.min.js"></script>
 <script src="js/vendor/jquery-ui.min.js"></script>
 <script src="js/vendor/jquery.easings.min.js"></script>
