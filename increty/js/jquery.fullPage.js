@@ -7,6 +7,7 @@
  */
 
 (function ($) {
+
     $.fn.fullpage = function (options) {
         // Create some defaults, extending them with any options that were provided
         options = $.extend({
@@ -56,7 +57,6 @@
             'sectionSelector': '.section',
             'slideSelector': '.slide',
 
-
             //events
             'afterLoad': null,
             'onLeave': null,
@@ -64,8 +64,11 @@
             'afterResize': null,
             'afterReBuild': null,
             'afterSlideLoad': null,
-            'onSlideLeave': null
+            'onSlideLeave': null,
 
+            //added by morladim
+            'headerHeight': 0,
+            'footerMode': false
 
         }, options);
 
@@ -824,6 +827,9 @@
                             }
                             inFooter = true;
                             var a = '-' + $("#footer").height() + 'px';
+//                            addAnimation($("#footer"));
+//                            addAnimation($("#footer").children());
+//                            addAnimation($("html,body"));
                             container.css({
                                 'margin-top': a,
                                 'margin-bottom': '-128px'

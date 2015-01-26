@@ -4,10 +4,14 @@ $(document).ready(function () {
     $('#main').fullpage({
         'verticalCentered': false,
 //        'easing': 'easeInQuart',
+//        'easing': 'easeInOutQuint',
+//        'easingcss3': 'cubic-bezier(0.86, 0, 0.07, 1)',
         'css3': true,
         'autoScrolling': true,
         'navigation': true,
         'scrollingSpeed': 1000,
+        'headerHeight': 128,
+        'footerMode': true,
         'navigationPosition': 'right',
         'navigationTooltips': ['Homepage', 'Advertise', 'Web Integration', 'Works', 'Company', 'Mail Magazine', 'Contact'],
         'onLeave': function (index, nextIndex, direction) {
@@ -310,7 +314,11 @@ function fc(id) {
         $("#" + id).children(":first").attr("src", "img/footer/arrow_off.png");
     }
 
+//    $("#" + id).children().eq(2).slideToggle("slow", "cubic-bezier(0.86, 0, 0.07, 1)", function () {
+//    });
     $("#" + id).children().eq(2).toggle();
+//    $("#" + id).children().eq(2).slideToggle();
+
 
     $("#main").css({'margin-top': "-" + $("#footer").height() + "px", 'margin-bottom': '-128px'});
     $("#main").stop(true, false);

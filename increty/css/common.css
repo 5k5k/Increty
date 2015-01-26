@@ -1,0 +1,62 @@
+body {
+    background-color: #ffffff;
+}
+
+#frame {
+    width: 100%;
+    margin-left: 0px;
+    left: 0%;
+}
+
+#header {
+    position: relative;
+    background: #ffffff;
+}
+
+.header {
+    position: relative;
+    height: 128px;
+    width: 980px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.advertise-frame {
+    position: relative;
+    width: 100%;
+    background: #b24a50;
+}
+
+#advertise-frame {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    top: 0;
+}
+
+.center {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#location-nav-frame {
+    top: 0;
+}
+
+#exange-tabs-frame {
+    top: 52px;
+}
+
+#main {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    top: 0;
+}
+
+.to_top {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
