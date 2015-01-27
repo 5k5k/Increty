@@ -67,6 +67,8 @@
             'onSlideLeave': null,
 
             //added by morladim
+            'onLoadFooter': null,
+            'onLeaveFooter': null,
             'headerHeight': 0,
             'footerMode': false
 
@@ -603,28 +605,11 @@
                     currentSection.addClass('active').siblings().removeClass('active');
 
                     if (!isMoving) {
-//                        if (fromIndex >= 6) {
-//                        if (inFooter) {
-//                            isMoving = true;
-//                            container.css({
-//                                'margin-top': 0,
-//                                'margin-bottom': '0'
-//                            });
-//                            setTimeout(function () {
-//                                inFooter = false;
-//                                isMoving = false;
-////                                    $.isFunction(v.callback) && v.callback.call(this);
-//                                $.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, sectionIndex, yMovement);
-//
-//                                $.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, sectionIndex);
-//                            }, scrollDelay);
-//                            alert('in');
-//                        } else {
-//                        }
+
                         $.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, sectionIndex, yMovement);
 
                         $.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, sectionIndex);
-//                        }
+
                     }
 
                     activateMenuAndNav(anchorLink, 0);
@@ -813,7 +798,6 @@
                 //preventing to scroll the site on mouse wheel when scrollbar is present
                 if (options.scrollBar) {
                     e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
                 }
 
                 var activeSection = $('.fp-section.active');
@@ -823,40 +807,43 @@
                 if (!isMoving) { //if theres any #
                     //scrolling down?
                     if (delta < 0) {
-                        if (fromIndex >= 6) {//show footer
-                            if (inFooter) {
-                                return;
+                        if (options.footerMode) {
+                            if (fromIndex >= $('.fp-section').length - 1) {//show footer
+                                if (inFooter) {
+                                    return;
+                                }
+                                inFooter = true;
+                                $.isFunction(options.onLoadFooter) && options.onLoadFooter.call();
+                                addAnimation(container);
+                                container.css({
+                                    'margin-top': '-' + $("#footer").height() + 'px',
+                                    'margin-bottom': '-' + headerHeight + 'px'
+                                });
+                            } else {
+                                scrolling('down', scrollable);
                             }
-                            addAnimation(container);
-                            inFooter = true;
-                            var a = '-' + $("#footer").height() + 'px';
-//                            addAnimation($("#footer"));
-//                            addAnimation($("#footer").children());
-//                            addAnimation($("html,body"));
-                            container.css({
-                                'margin-top': a,
-                                'margin-bottom': '-128px'
-                            });
-                            $("#footer_top").stop();
-                            $("#footer_top").css({opacity: 0}).delay(1000).animate({opacity: 1}, 1000);
                         } else {
                             scrolling('down', scrollable);
                         }
                         //scrolling up?
                     } else {
-                        if (fromIndex >= 6) {//close footer
-                            if (inFooter) {
-                                isMoving = true;
-                                addAnimation(container);
-                                container.css({
-                                    'margin-top': 0,
-                                    'margin-bottom': 0
-                                });
-//                                $("#footer_top").animate({opacity: 0}, 200);
-                                setTimeout(function () {
-                                    inFooter = false;
-                                    isMoving = false;
-                                }, scrollDelay);
+                        if (options.footerMode) {
+                            if (fromIndex >= $('.fp-section').length - 1) {//close footer
+                                if (inFooter) {
+                                    isMoving = true;
+                                    $.isFunction(options.onLeaveFooter) && options.onLeaveFooter.call();
+                                    addAnimation(container);
+                                    container.css({
+                                        'margin-top': 0,
+                                        'margin-bottom': 0
+                                    });
+                                    setTimeout(function () {
+                                        inFooter = false;
+                                        isMoving = false;
+                                    }, scrollDelay);
+                                } else {
+                                    scrolling('up', scrollable);
+                                }
                             } else {
                                 scrolling('up', scrollable);
                             }
@@ -865,7 +852,6 @@
                         }
                     }
                 }
-
                 return false;
             }
         }
