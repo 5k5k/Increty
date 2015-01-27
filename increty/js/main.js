@@ -5,6 +5,7 @@ $(document).ready(function () {
         'verticalCentered': false,
 //        'easing': 'easeInQuart',
 //        'easing': 'easeInOutQuint',
+//        'easingcss3': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
 //        'easingcss3': 'cubic-bezier(0.86, 0, 0.07, 1)',
         'css3': true,
         'autoScrolling': true,
@@ -12,12 +13,15 @@ $(document).ready(function () {
         'scrollingSpeed': 1000,
         'headerHeight': 128,
         'footerMode': true,
-//        'fixedElements': '#footer',
         'navigationPosition': 'right',
         'navigationTooltips': ['Homepage', 'Advertise', 'Web Integration', 'Works', 'Company', 'Mail Magazine', 'Contact'],
         'onLeave': function (index, nextIndex, direction) {
             pageLeave(index);
             pageAnimation(nextIndex);
+        },
+        'onLoadFooter': function () {
+            $("#footer_top").stop();
+            $("#footer_top").css({opacity: 0}).delay(1000).animate({opacity: 1}, 1000);
         }
     });
 });
@@ -309,6 +313,7 @@ $(window).resize(function () {
 //footer content click event
 function fc(id) {
     $('#main').addClass('fp-notransition');
+//    $('#main').removeClass('fp-notransition');
     var src = $("#" + id).children(":first").attr("src");
     if (src == "img/footer/arrow_off.png") {
         $("#" + id).children(":first").attr("src", "img/footer/arrow_on.png");
@@ -320,11 +325,31 @@ function fc(id) {
 //    $("#" + id).children().eq(2).slideToggle("slow", "cubic-bezier(0.86, 0, 0.07, 1)", function () {
 //    });
 //    $("#" + id).children().eq(2).toggle(1000,"swing",function(){});
-    $("#" + id).children().eq(2).toggle();
+
+    var oldFooterH = $("#footer").height();
+    var newFooterH = $("#footer").height();
+    var l = 0;
+    $("#" + id).children().eq(2).toggle(
+//        function () {
+//            newFooterH = $("#footer").height();
+//            if (oldFooterH > newFooterH) {
+//                l = oldFooterH - newFooterH;
+////                var transition = 'all|1000ms|linear';
+////                $('#copyright').css({
+////                    '-webkit-transition': transition,
+////                    'transition': transition
+////                });
+//                console.log("in");
+//                $("#copyright").css({'margin-top': l + 'px'}).animate({'margin-top': 0 + 'px'}, 1000, 'linear');
+//            }
+//            $("#main").css({'margin-top': "-" + $("#footer").height() + "px", 'margin-bottom': '-128px'});
+//        }
+    );
 //    $("#" + id).children().eq(2).slideToggle();
+//    $("#" + id).slideToggle();
 
     $("#main").css({'margin-top': "-" + $("#footer").height() + "px", 'margin-bottom': '-128px'});
-    $("#main").stop(true, false);
+//    $("#main").stop(true, false);
 
 }
 
