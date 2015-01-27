@@ -2,10 +2,23 @@ body {
     background-color: #ffffff;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    top:0;
+    padding-top: 0;
+}
+
 #frame {
     width: 100%;
     margin-left: 0px;
     left: 0%;
+    /*text-align: left;*/
+    height: auto;
 }
 
 #header {
@@ -19,6 +32,7 @@ body {
     width: 980px;
     margin: 0 auto;
     background: #ffffff;
+    text-align: left;
 }
 
 .advertise-frame {
@@ -59,4 +73,246 @@ body {
     position: relative;
     width: 980px;
     margin: 0 auto;
+}
+
+/*---------header-----------*/
+
+.header_content {
+    width: 980px;
+    margin: 0 auto;
+    height: 128px;
+    position: relative;
+}
+
+.header_content img {
+    position: absolute;
+}
+
+.header_content .logo {
+    top: 58px;
+    left: 78px;
+}
+
+.header_content .advertise {
+    left: 449px;
+    top: 66px;
+}
+
+.header_content .web {
+    left: 578px;
+    top: 66px;
+}
+
+.header_content .works {
+    left: 741px;
+    top: 66px;
+}
+
+.header_content .company {
+    left: 851px;
+    top: 66px;
+}
+
+.header_content .top_d {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: #2a2a2a;
+    width: 245px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.header_content .top_d a {
+    text-align: center;
+    color: #cccccc;
+    font-size: 12px;
+    margin-left: 30px;
+    font-family: 'Meiryo', sans-serif;
+}
+
+/*--------------footer--------------*/
+#footer {
+    position: relative;
+    width: 100%;
+    background: #191919;
+    color: #ffffff;
+    padding-top: 1px;
+
+    /*position: absolute;*/
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+}
+
+#footer_title {
+    display: block;
+    position: relative;
+    width: 141px;
+    height: 44px;
+    margin: 53px auto;
+}
+
+#footer_top {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+#footer_content {
+    width: 652px;
+    margin: 8px auto 54px auto;
+    font-size: 12px;
+    line-height: 30px;
+    color: #2e2e2e;
+    font-family: 'Meiryo', sans-serif;
+}
+
+#copyright {
+    background: #000000;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 60px;
+    color: #9da1a6;
+    font-family: Verdana, sans-serif;
+    clear:both;
+}
+
+#fc_1 {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#fc_2 {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#fc_3 {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#fc_4 {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#footer_content a {
+    color: #666666;
+}
+
+#footer_content img {
+    margin-right: 10px;
+}
+
+.fc_hide {
+    margin-left: 20px;
+    /*-webkit-transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);*/
+    /*transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);*/
+    -webkit-transition: all 1000ms ease-out;
+    transition: all 1000ms ease-out;
+}
+
+#main{
+/*height: auto;*/
+    /*background: #ffff00;*/
+}
+
+#contents{
+    background: #ffffff;
+}
+#advertise-frame {
+    text-align: center;
+}
+
+#contents {
+    position: relative;
+    width: 100%;
+}
+
+#location-nav-frame {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 880px;
+    height: 52px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 52px;
+    z-index: 30;
+}
+
+#location-nav-frame .home-location {
+    position: relative;
+    /*top: 50%;*/
+    top:0;
+    margin-left: 50px;
+    margin-top: 0;
+    float: left;
+    text-decoration: none;
+    color: black;
+}
+
+#location-nav-frame .subpage-location {
+    position: relative;
+    top: 0;
+    /*top: 50%;*/
+    margin-top: 0;
+    color: gray;
+    float: left;
+    text-decoration: none;
+}
+
+#exange-tabs-frame {
+    position: relative;
+    top:0px;
+    left: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 131px;
+    width: 880px;
+
+    text-align: left;
+    border-bottom-style: solid;
+    border-bottom-color: #333333;
+    border-bottom-width: 2px;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+
+#nav-list-frame > a .maintitle {
+    position: relative;
+    font-family: 'MeiryoBold', Meiryo;
+    font-weight: bold;
+    font-weight: normal !important;
+    font-size: 14px;
+    width: 120px;
+    top: 7px;
+    left: 0px;
+    height: 25px;
+    line-height: 25px;
+}
+
+#nav-list-frame > a .subtitle {
+    position: relative;
+    font-family: 'HelveticaNeue', Helvetica;
+    font-size: 12px;
+    width: 120px;
+    height: 20px;
+    top: 27px;
+    left: 0px;
+    line-height: 20px;
 }
