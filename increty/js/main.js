@@ -12,6 +12,7 @@ $(document).ready(function () {
         'scrollingSpeed': 1000,
         'headerHeight': 128,
         'footerMode': true,
+//        'fixedElements': '#footer',
         'navigationPosition': 'right',
         'navigationTooltips': ['Homepage', 'Advertise', 'Web Integration', 'Works', 'Company', 'Mail Magazine', 'Contact'],
         'onLeave': function (index, nextIndex, direction) {
@@ -307,18 +308,20 @@ $(window).resize(function () {
 
 //footer content click event
 function fc(id) {
+    $('#main').addClass('fp-notransition');
     var src = $("#" + id).children(":first").attr("src");
     if (src == "img/footer/arrow_off.png") {
         $("#" + id).children(":first").attr("src", "img/footer/arrow_on.png");
     } else {
         $("#" + id).children(":first").attr("src", "img/footer/arrow_off.png");
+
     }
 
 //    $("#" + id).children().eq(2).slideToggle("slow", "cubic-bezier(0.86, 0, 0.07, 1)", function () {
 //    });
+//    $("#" + id).children().eq(2).toggle(1000,"swing",function(){});
     $("#" + id).children().eq(2).toggle();
 //    $("#" + id).children().eq(2).slideToggle();
-
 
     $("#main").css({'margin-top': "-" + $("#footer").height() + "px", 'margin-bottom': '-128px'});
     $("#main").stop(true, false);
@@ -332,7 +335,6 @@ function open() {
     } else {
         $("#open").attr('src', 'img/page1/open_off.png');
     }
-
     $("#p1_footer_content").children().eq(1).children(":first-child").toggle();
 }
 

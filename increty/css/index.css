@@ -765,6 +765,10 @@ fieldset, img {
 
 .fc_hide {
     margin-left: 20px;
+    /*-webkit-transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);*/
+    /*transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);*/
+    -webkit-transition: all 1000ms ease-out;
+    transition: all 1000ms ease-out;
 }
 
 /*----------------*/

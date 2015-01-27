@@ -127,7 +127,6 @@
                 //scrolling the page to the section with no animation
                 $('html, body').scrollTop(element.position().top);
             }
-
         };
 
         /**
@@ -254,14 +253,14 @@
             }
 
             $('.fp-section').each(function () {
-                var scrollHeight = windowsHeight - myHeight - parseInt($(this).css('padding-bottom')) - parseInt($(this).css('padding-top'));
+                var scrollHeight = windowsHeight - headerHeight - parseInt($(this).css('padding-bottom')) - parseInt($(this).css('padding-top'));
 
                 //adjusting the height of the table-cell for IE and Firefox
                 if (options.verticalCentered) {
                     $(this).find('.fp-tableCell').css('height', getTableHeight($(this)) + 'px');
                 }
 
-                $(this).css('height', windowsHeight - myHeight + 'px');
+                $(this).css('height', windowsHeight - headerHeight + 'px');
 
                 //resizing the scrolling divs
                 if (options.scrollOverflow) {
@@ -314,6 +313,9 @@
         var isScrollAllowed = { 'up': true, 'down': true, 'left': true, 'right': true };
         var recordHistory = options.recordHistory;
 
+        var inFooter = false;
+        var headerHeight = options.headerHeight;
+
         $.fn.fullpage.setAllowScrolling(true);
 
         //if css3 is not supported, it will use jQuery animations
@@ -359,7 +361,7 @@
                 $(this).addClass('active');
             }
 
-            $(this).css('height', windowsHeight - myHeight + 'px');
+            $(this).css('height', windowsHeight - headerHeight + 'px');
 
             if (options.paddingTop || options.paddingBottom) {
                 $(this).css('padding', options.paddingTop + ' 0 ' + options.paddingBottom + ' 0');
@@ -825,6 +827,7 @@
                             if (inFooter) {
                                 return;
                             }
+                            addAnimation(container);
                             inFooter = true;
                             var a = '-' + $("#footer").height() + 'px';
 //                            addAnimation($("#footer"));
@@ -844,6 +847,7 @@
                         if (fromIndex >= 6) {//close footer
                             if (inFooter) {
                                 isMoving = true;
+                                addAnimation(container);
                                 container.css({
                                     'margin-top': 0,
                                     'margin-bottom': 0
@@ -1318,7 +1322,7 @@
         //when resizing the site, we adjust the heights of the sections, slimScroll...
         $(window).resize(resizeHandler);
 
-        var previousHeight = windowsHeight - myHeight;
+        var previousHeight = windowsHeight - headerHeight;
         var resizeId;
 
         function resizeHandler() {
@@ -1500,7 +1504,7 @@
                 }
             }
 
-            var scrollHeight = windowsHeight - myHeight - parseInt(section.css('padding-bottom')) - parseInt(section.css('padding-top'));
+            var scrollHeight = windowsHeight - headerHeight - parseInt(section.css('padding-bottom')) - parseInt(section.css('padding-top'));
 
             //needs scroll?
             if (contentHeight > scrollHeight) {
@@ -1545,7 +1549,7 @@
         }
 
         function getTableHeight(element) {
-            var sectionHeight = windowsHeight - myHeight;
+            var sectionHeight = windowsHeight - headerHeight;
 
             if (options.paddingTop || options.paddingBottom) {
                 var section = element;
@@ -1554,7 +1558,7 @@
                 }
 
                 var paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));
-                sectionHeight = (windowsHeight - myHeight - paddings);
+                sectionHeight = (windowsHeight - headerHeight - paddings);
             }
 
             return sectionHeight;
@@ -1994,6 +1998,3 @@
         }
     };
 })(jQuery);
-
-var inFooter = false;
-var myHeight = 128;
